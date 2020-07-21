@@ -38,7 +38,9 @@ namespace GettingStarted
             if (sfgrid.StackedHeaderRows.Count == 0)
             {
                 var gridSHRow = new Syncfusion.UI.Xaml.Grid.StackedHeaderRow();
-                gridSHRow.StackedColumns.Add(new Syncfusion.UI.Xaml.Grid.StackedColumn { ChildColumns = "OrderID,CustomerID", HeaderText = "ID's" });
+                gridSHRow.StackedColumns.Add(new Syncfusion.UI.Xaml.Grid.StackedColumn { ChildColumns = "OrderID,CustomerID", HeaderText = "ID" });
+                gridSHRow.StackedColumns.Add(new Syncfusion.UI.Xaml.Grid.StackedColumn { ChildColumns = "ProductName,OrderDate,Quantity,UnitPrice", HeaderText = "Order Details" });
+                gridSHRow.StackedColumns.Add(new Syncfusion.UI.Xaml.Grid.StackedColumn { ChildColumns = "DeliveryDelay,ShipAddress,ContactNumber", HeaderText = "Delivery Details" });
                 sfgrid.StackedHeaderRows.Add(gridSHRow);
             }
         }  

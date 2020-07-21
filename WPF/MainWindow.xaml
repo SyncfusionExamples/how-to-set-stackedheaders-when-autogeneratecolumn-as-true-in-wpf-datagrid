@@ -17,13 +17,13 @@
             <syncfusion:LayoutControl.GridView>
                 <syncfusion:SfDataGrid x:Name="sfgrid"
                                        AllowDraggingColumns="True"
+                                       ColumnSizer="Star"
                                        AutoGeneratingColumn="Sfgrid_AutoGeneratingColumn"
                                        AllowEditing="True"
                                        AllowFiltering="True"
                                        AllowGrouping="True"
                                        ItemsSource="{Binding OrderList}"
-                                       ShowGroupDropArea="True"  >
-                </syncfusion:SfDataGrid>
+                                       ShowGroupDropArea="True" />
             </syncfusion:LayoutControl.GridView>
 
         </syncfusion:LayoutControl>
