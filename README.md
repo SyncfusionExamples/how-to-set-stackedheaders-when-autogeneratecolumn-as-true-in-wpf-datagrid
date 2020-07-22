@@ -8,12 +8,14 @@ By default, you can’t add the StackedHeaderRows in SfDataGrid when generate th
 ```c#
 private void Sfgrid_AutoGeneratingColumn(object sender, Syncfusion.UI.Xaml.Grid.AutoGeneratingColumnArgs e)
 {
-  if (sfgrid.StackedHeaderRows.Count == 0)
-  {
-    var gridSHRow = new Syncfusion.UI.Xaml.Grid.StackedHeaderRow();
-    gridSHRow.StackedColumns.Add(new Syncfusion.UI.Xaml.Grid.StackedColumn { ChildColumns = "OrderID,CustomerID", HeaderText = "ID's" });
-    sfgrid.StackedHeaderRows.Add(gridSHRow);
-  }
+    if (sfgrid.StackedHeaderRows.Count == 0)
+    {
+        var gridSHRow = new Syncfusion.UI.Xaml.Grid.StackedHeaderRow();
+        gridSHRow.StackedColumns.Add(new Syncfusion.UI.Xaml.Grid.StackedColumn { ChildColumns = "OrderID,CustomerID", HeaderText = "ID" });
+        gridSHRow.StackedColumns.Add(new Syncfusion.UI.Xaml.Grid.StackedColumn { ChildColumns = "ProductName,OrderDate,Quantity,UnitPrice", HeaderText = "Order Details" });
+        gridSHRow.StackedColumns.Add(new Syncfusion.UI.Xaml.Grid.StackedColumn { ChildColumns = "DeliveryDelay,ShipAddress,ContactNumber", HeaderText = "Delivery Details" });
+        sfgrid.StackedHeaderRows.Add(gridSHRow);
+    }
 }   
 ```
 ## Requirements to run the demo
