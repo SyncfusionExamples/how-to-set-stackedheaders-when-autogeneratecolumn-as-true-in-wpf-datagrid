@@ -1,7 +1,8 @@
 # How to set StackedHeaders when AutoGenerateColumn as true in WPF DataGrid(SfDataGrid)?
-# About the sample
 
 How to set StackedHeaders when AutoGenerateColumn as true in WPF DataGrid(SfDataGrid)?
+
+# About the sample
 
 By default, you can’t add the StackedHeaderRows in SfDataGrid when generate the column automatically. But you can achieve this by using AutoGeneratingColumn event
 
